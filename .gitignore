@@ -1,0 +1,16 @@
+_results/
+_data/
+__pycache__/
+.idea/
+.vscode/
+*.pt
+*.pdf
+*.png
+*.eps
+*.svg
+*.mat
+*.npy
+*.asv
+*.txt
+*.xml
+*.fig

@@ -1,0 +1,108 @@
+{
+    "exp": "1",
+    "exp_dir": "./_results/threetanks/1",
+    "control_dir": "./_results/threetanks/1/control/",
+    "system": "threetanks",
+    "u_dim": 3,
+    "y_dim": 3,
+    "p_dim": 0,
+    "x0_name": "./_data/threetanks/set-point/5/",
+    "p_name": "inf_rain_mean",
+    "sp_dir": "./_data/threetanks/setpoints/",
+    "sys_param_dir": "./_data/threetanks/",
+    "y_idx": [
+        2,
+        5,
+        8
+    ],
+    "noise": false,
+    "x0_std_dev": 0.03,
+    "T": 200,
+    "Tini": 10,
+    "Np": 10,
+    "N": 50,
+    "sp_num": 2,
+    "Q": [
+        5,
+        5,
+        5
+    ],
+    "R": [
+        1,
+        1,
+        1
+    ],
+    "P_y": [
+        10,
+        10,
+        10
+    ],
+    "P_u": [
+        10,
+        10,
+        10
+    ],
+    "RDeePC": false,
+    "lambda_y": [
+        10,
+        10,
+        10
+    ],
+    "lambda_g": 10,
+    "svd": false,
+    "solver": "ipopt",
+    "dpc_opts": {
+        "ipopt.max_iter": 1000,
+        "ipopt.tol": 1e-05,
+        "ipopt.print_level": 1,
+        "print_time": 0
+    },
+    "con_opt": true,
+    "u_lb": [
+        2800000000.0,
+        900000000.0,
+        2800000000.0
+    ],
+    "u_ub": [
+        3000000000.0,
+        1200000000.0,
+        3000000000.0
+    ],
+    "y_lb": [
+        480,
+        472,
+        474
+    ],
+    "y_ub": [
+        493.5,
+        486,
+        488
+    ],
+    "lr": 0.0001,
+    "input_size": 66,
+    "hidden_size_list": [
+        150,
+        150,
+        150
+    ],
+    "output_size": 181,
+    "epoch": 1000,
+    "batch_size": 200,
+    "data_size": 10000,
+    "model_dir": "./_results/threetanks/1/model/",
+    "data_dir": "./_results/threetanks/1/data/",
+    "fig_dir": "./_results/threetanks/1/fig/",
+    "control_fig_dir": "./_results/threetanks/1/control_fig/",
+    "offline_dir": "./_data/threetanks/offline_data/",
+    "online_dir": "./_data/threetanks/online_data/",
+    "openloop_dir": "./_data/threetanks/offline_data/uhold/",
+    "scale_dir": "./_data/threetanks/scale_data/minmax/",
+    "control_sp": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "open_loop": true
+}
