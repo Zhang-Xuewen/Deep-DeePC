@@ -1,4 +1,4 @@
-# Deep learning based data-enabled predictive control (DeepDeePC)
+# Deep DeePC
 
 This project is the source code of paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**]() by *X. Zhang, K. Zhang, Z. Li, and X. Yin*.
 
