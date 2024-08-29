@@ -1,0 +1,12 @@
+gym
+wandb
+torch
+numpy 
+scipy
+argparse
+texttable
+matplotlib
+scikit-learn
+casadi==3.6.5
+deepctools==1.0.5
+QYtool==1.0.8
