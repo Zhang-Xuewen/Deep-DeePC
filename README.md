@@ -4,15 +4,9 @@ This project is the source code of paper [**Deep DeePC: Data-enabled predictive 
 
 The objective of this work is to learn the DeePC operator using a neural network and bypass the online optimization of conventional DeePC for efficient online implementation.
 
-> The project is released under the APACHE license. See [LICENSE](https://github.com/QiYuan-Zhang/QYtool/blob/main/LICENSE) for details.
+> If you are using this work in your research or teaching, please include explicit acknowledge of this work and of our paper.
 >
-> Copyright 2024 Xuewen Zhang (xuewen001@e.ntu.edu.sg)
->
-> Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-> ```
->     http://www.apache.org/licenses/LICENSE-2.0
-> ```
->Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+> Please check the sections of [**License**](#license) and [**Citation**](#citation) at the end.
 
 ---
 
@@ -174,7 +168,7 @@ The sources code is established and contributed by `Xuewen Zhang`. This project 
 
 ## Citation
 
-- If you are using this work in your research or teaching, please include explicit mention of this work and of our paper:
+- If you are using this work in your research or teaching, please include explicit acknowledgment of this work and of our paper:
 ```
     @article{zhang2024deepdeepc,
     title={Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learnin},
