@@ -1,6 +1,6 @@
 # Deep DeePC
 
-This project is the source code of paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**]() by *X. Zhang, K. Zhang, Z. Li, and X. Yin*.
+This project is the source code of paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338) by *X. Zhang, K. Zhang, Z. Li, and X. Yin*.
 
 The objective of this work is to learn the DeePC operator using a neural network and bypass the online optimization of conventional DeePC for efficient online implementation.
 
@@ -130,14 +130,14 @@ Additionally, two toolboxes are used which are developed by myself:
 
 ![Data_process](./_data/README_fig/Data_process.svg)
 
-Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](). Please refer to the paper for more details.
+Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
 
 ### 2. Offline training 
 
 ![Architecture](./_data/README_fig/Architecture.svg)
 
-Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](). Please refer to the paper for more details.
+Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
 - Neural network: $\hat{g} = F_{\theta}(\mathbf{u}_{ini}, \mathbf{y}_{ini}, e_u, e_y | \theta)$ 
 
@@ -149,7 +149,7 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 ![Constraint_handling](./_data/README_fig/Constraint_handling.svg)
 
-Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](). Please refer to the paper for more details.
+Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
 - When predicted trajectories $\hat{\mathbf{u}}_k = U_f \hat{g}_k, \ \hat{\mathbf{y}}_k = Y_f \hat{g}_k$ violate constraints, solve the following optimization problem:
 
@@ -165,20 +165,30 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 ## IV. Case study on chemical process
 
 ![Reactor-separator](./_data/README_fig/Reactor-separator.svg)
-Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](). Please refer to the paper for more details.
+Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
 
 ## Acknowledgment
 
-The sources code is established and contributed by `Xuewen Zhang`. This project is the source code of paper `X. Zhang, K. Zhang, Z. Li, and X. Yin. Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning. Submitted, 2024`. 
+The sources code is established and contributed by `Xuewen Zhang`. This project is the source code of paper `X. Zhang, K. Zhang, Z. Li, and X. Yin. Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning. arXiv preprint arXiv:2408.16338, 2024`. 
 
 ## Citation
 
+- If you are using this work in your research or teaching, please include explicit mention of this work and of our paper:
+```
+    @article{zhang2024deepdeepc,
+    title={Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learnin},
+    author={Zhang, Xuewen and Zhang, Kaixiang and Li, Zhaojian and Yin, Xunyuan},
+    journal={arXiv:2408.16338},
+    year={2024}
+    }
 ```
 
+- The code also contains the [`deepctools`](https://github.com/QiYuan-Zhang/DeePCtools) toolbox for implementing DeePC, developed by `Xuewen Zhang`. Please be sure to explicitly acknowledge its use if you incorporate it into your work. This project and its license can be found in this [link](https://github.com/QiYuan-Zhang/DeePCtools).
+
+- The code also contains the [`QYtool`](https://github.com/QiYuan-Zhang/QYtool) toolbox for research needs, developed by `Xuewen Zhang`. Please be sure to explicitly acknowledge its use if you incorporate it into your work. This project and its license can be found in this [link](https://github.com/QiYuan-Zhang/QYtool).
 
 
-```
 
 ## License
 The project is released under the APACHE license. See [LICENSE](https://github.com/QiYuan-Zhang/QYtool/blob/main/LICENSE) for details.
