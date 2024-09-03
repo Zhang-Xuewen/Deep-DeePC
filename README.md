@@ -1,3 +1,5 @@
+![Architecture](./_data/README_fig/Architecture.svg)
+
 # Deep DeePC
 
 This project is the source code of paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338) by *X. Zhang, K. Zhang, Z. Li, and X. Yin*.
