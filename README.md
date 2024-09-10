@@ -78,7 +78,7 @@ For example:
 ```
 For example, to test the well-trained model 3:
 ```
-    python main.py --threetanks --test 3 --test_num 10 --N 100 --noise
+    python main.py --system threetanks --test 3 --test_num 10 --N 100 --noise
 ```
 - The test part is identical to the part used in training and can be used for multiple evaluation trials.
 
