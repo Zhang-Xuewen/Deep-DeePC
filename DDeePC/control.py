@@ -179,12 +179,17 @@ class control(object):
         return check_flag
     
      
-    def _update_ini(self, uini_, yini_, uk_=None, yk_=None, us_=None, ys_=None):
+    def _update_ini(self, uini_, yini_, uk_=None, yk_=None, yk1_=None, us_=None, ys_=None):
         """
         Args:
-            uk_ (_type_, optional): _description_. Defaults to None.
-            yk_ (_type_, optional): _description_. Defaults to None.
-
+            uk_ (array, optional): control input at time instant k. Defaults to None.
+            yk_ (array, optional): output at time instant k. Defaults to None.
+            yk1_ (array, optional): output at time instant k+1. Defaults to None.
+            us_ (array, optional): set-point at time instant k. Defaults to None.
+            ys_ (array, optional): set-point at time instant k+1. Defaults to None.
+        Computations:
+            u_e_ (torch): control input error. e_u_k_ = u(k)^r_ - u(k-1)_
+            y_e_ (torch): output error. e_y_k_ = y(k+1)^r_ - y(k)_
         Returns:
             input: (1, (u_dim + y_dim)*Tini), input to the neural network
         """
@@ -195,7 +200,7 @@ class control(object):
         uini_line, yini_line = uini_.copy().reshape(1, -1), yini_.copy().reshape(1, -1)
         us_, ys_ = us_.copy().reshape(1, -1), ys_.copy().reshape(1, -1)
         u_e_ = us_ - uini_[-1, :].copy()
-        y_e_ = ys_ - yini_[-1, :].copy()
+        y_e_ = ys_ - yini_[-1, :].copy() if yk1_ is None else ys_ - yk1_.copy()
         inputs = torch.FloatTensor(np.hstack((uini_line, yini_line, u_e_, y_e_))).to(self.device)
         # inputs = torch.FloatTensor(np.hstack((uini_line, yini_line))).to(self.device)
         return inputs, uini_, yini_
@@ -383,12 +388,12 @@ class control(object):
                 for i in range(self.N * len(self.control_sp)):
                     us_ = self.us_all_[i+self.Tini:i+self.Tini+1, :].copy()
                     # ys_ = self.ys_all_[i+self.Tini:i+self.Tini+1, :].copy()
-                    if i + 2 < self.N * len(self.control_sp):
-                        ys_ = self.ys_all_[i+self.Tini+2:i+self.Tini+3, :].copy()  # y^r_k+1
+                    if i + 1 < self.N * len(self.control_sp):
+                        ys_ = self.ys_all_[i+self.Tini+1:i+self.Tini+2, :].copy()  # y^r_k+1
                     else:
                         ys_ = self.ys_all_[-1:, :].copy()
                     
-                    inputs, uini_, yini_ = self._update_ini(uini_, yini_, uk_, yk1_, us_, ys_)
+                    inputs, uini_, yini_ = self._update_ini(uini_, yini_, uk_, yk_, yk1_, us_, ys_)
 
                     with torch.no_grad():
                         t_ = time.time()

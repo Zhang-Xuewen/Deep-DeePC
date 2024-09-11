@@ -202,7 +202,7 @@ class deepc():
         """ initialize the deepc with PID controller """
         pid_bar = progressbar.probar2()
         # apply pid control if x0 != xs_0, the first set-point, otherwise, use us_0
-        pid_flag = np.array_equal(self.plant.state[self.y_idx], self.ys_all[0,:]) 
+        pid_flag = not np.array_equal(self.plant.state[self.y_idx], self.ys_all[0,:]) 
         with pid_bar:
             pid_task = pid_bar.add_task("PID loop", unit='step', total=self.Tini, loss=np.inf)
             cost_y_ini = []

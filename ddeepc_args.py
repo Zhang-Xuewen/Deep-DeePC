@@ -61,7 +61,7 @@ update_variables = dict(
         data_size=10000,
         
         # Control set-points
-        control_sp = [6, 7, 8], 
+        control_sp = [1, 2, 3], 
         open_loop = True,
 )
 
