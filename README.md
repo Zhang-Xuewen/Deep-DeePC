@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Deep DeePC</h1>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #Deep DeePC
 
 ![Architecture](./_data/README_fig/Architecture.svg)
 
