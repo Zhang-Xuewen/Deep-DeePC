@@ -1,4 +1,4 @@
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #Deep DeePC
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # Deep DeePC
 
 ![Architecture](./_data/README_fig/Architecture.svg)
 
