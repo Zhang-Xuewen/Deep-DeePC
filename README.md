@@ -119,7 +119,7 @@ Additionally, two toolboxes are used which are developed by myself:
 - [`QYtool`](https://github.com/QiYuan-Zhang/QYtool): A wrapped useful tool package designed for research purposes, tailored specifically for my own research needs.
 
 
-## III. Introductio to Deep DeePC
+## III. Introduction to Deep DeePC
 
 
 ### 1. Training data construction
