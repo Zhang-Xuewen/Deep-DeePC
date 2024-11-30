@@ -12,6 +12,26 @@ The objective of this work is to learn the DeePC operator using a neural network
 
 ---
 
+## Content 
+
+- [I. How to use](#i-how-to-use)
+    - [1. Install required packages](#1-install-required-packages)
+    - [2. Run the project](#2-run-the-project)
+        - [a. Generate set-points for selected system](#a-generate-set-points-for-selected-system)
+        - [b. Train and test the model](#b-train-and-test-the-model)
+        - [c. Test the well-trained model](#c-test-the-well-trained-model)
+- [II. Organization of Deep DeePC source codes](#ii-organization-of-deep-deepc-source-codes)
+- [III. Introduction to Deep DeePC](#iii-introduction-to-deep-deepc)
+    - [1. Training data construction](#1-training-data-construction)
+    - [2. Offline training](#2-offline-training)
+    - [3. Constrained Deep DeePC for online implementation](#3-constrainted-deep-deepc-for-online-implementation)
+- [IV. Case study on chemical process](#iv-case-study-on-chemical-process)
+- [Acknowledgement](#acknowledgment)
+- [Citation](#citation)
+- [License](#license)
+
+
+
 ## I. How to use
 
 ### 1. Install required packages:
@@ -32,7 +52,7 @@ The source code can automatically run on a `CPU` or `GPU` without any modificati
 - The arguments of DDeePC project is defined and modified in `ddeepc_args.py`, specify the arguments first.
 - The training and testing part is in `main.py`.
   
-#### a. To generate set-points for selected system:
+#### a. Generate set-points for selected system:
 
 ```
     python main.py --system (selected systems) --gen_sp (number of set-points) --N (Time steps for one set-point)
@@ -46,7 +66,7 @@ For example:
 ![gen_sp](./_data/README_fig/gen_sp.png)
 
 
-#### b. To train and test the model:
+#### b. Train and test the model:
 ```
     python main.py --system (selected systems) --train --test_num (number of test runs) --N (Time steps for one set-point) --noise (#if add it, apply noise)
 ```
@@ -72,7 +92,7 @@ For example:
 
 
 
-#### c. To test the well-trained model:
+#### c. Test the well-trained model:
 ```
     python main.py --system (selected systems) --test (model number) --test_num (number of test runs) --N (Time steps for one set-point) --noise (#if add it, apply noise)
 ```
