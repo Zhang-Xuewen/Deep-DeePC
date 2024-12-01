@@ -186,12 +186,20 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 ## Acknowledgment
 
-The sources code is established and contributed by `Xuewen Zhang`. This project is the source code of paper `X. Zhang, K. Zhang, Z. Li, and X. Yin. Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning. arXiv preprint arXiv:2408.16338, 2024`. 
+The sources code is established and contributed by `Xuewen Zhang`. This project is the source code of paper `Zhang X, Zhang K, Li Z, Yin X. Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning. AICHE J. 2024;e18644. doi:10.1002/aic.18644`(`X. Zhang, K. Zhang, Z. Li, and X. Yin. Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning. arXiv preprint arXiv:2408.16338, 2024`). 
 
 ## Citation
 
 - If you are using this work in your research or teaching, please include explicit acknowledgment of this work and of our paper:
 ```
+    @article{zhang2024deepdeepc,
+    title={Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learnin},
+    author={Zhang, Xuewen and Zhang, Kaixiang and Li, Zhaojian and Yin, Xunyuan},
+    page={e18644},
+    journal={AICHE Journal},
+    year={2024},
+    doi={doi:10.1002/aic.18644}
+    }
     @article{zhang2024deepdeepc,
     title={Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learnin},
     author={Zhang, Xuewen and Zhang, Kaixiang and Li, Zhaojian and Yin, Xunyuan},
