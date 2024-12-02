@@ -79,14 +79,17 @@ For example:
 
 - The training process will automatically generate a new folder with a new trial number and save all related data and figures in this path: `./_results/system/new trial number`.
 
-- First test the conventional DeePC performance based on current parameters.
+- First test the conventional DeePC performance based on current parameters:
+  
 ![train_1](./_data/README_fig/train_1.png)
 
-- Next start the training process.
+- Next start the training process:
+
 ![train_2](./_data/README_fig/train_2.png)
 ![train_3](./_data/README_fig/train_3.png)
 
-- After training, start the test process for Deep DeePC and constrained Deep DeePC.
+- After training, start the test process for Deep DeePC and constrained Deep DeePC:
+
 ![train_2](./_data/README_fig/test_1.png)
 ![train_2](./_data/README_fig/test_1.png)
 
@@ -155,7 +158,8 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
-- Neural network: $$\hat{g} = F_{\theta}(\mathbf{u}_{ini},\mathbf{y}_{ini}, e_u, e_y | \theta)$$ 
+- Neural network: $\hat{g} = F_{\theta}(\mathbf{u}_{ini},\mathbf{y}_{ini}, e_u, e_y \mid \theta)$
+
 
 - Objective function: $J = \mathbb{E}_{\mathcal{D}} \Vert \mathbf{y}^r - \hat{\mathbf{y}} \Vert_Q^2 + \Vert \mathbf{u}^r - \hat{\mathbf{u}} \Vert_R^2 + \omega (\mathbf{u}, \mathbf{y})$ 
 
@@ -169,11 +173,12 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 - When predicted trajectories $\hat{\mathbf{u}}_k = U_f \hat{g}_k, \ \hat{\mathbf{y}}_k = Y_f \hat{g}_k$ violate constraints, solve the following optimization problem:
 
-    $$min_{g^*_k} \Vert g^*_k - \hat{g}_k \Vert_2^2$$
+$$\min_{g^*_k} \Vert g^*_k - \hat{g}_k \Vert_2^2$$
 
-    s.t. $$\quad \mathbf{u}_{lb} \leq U_f g^*_k\leq \mathbf{u}_{ub}$$
+s.t.  $$\mathbf{u}_{lb} \leq U_f g^*_k \leq \mathbf{u}_{ub}$$
 
-    $$\mathbf{y}_{lb} \leq Y_f g^*_k \leq \mathbf{y}_{ub}$$
+$$\mathbf{y}_{lb} \leq Y_f g^*_k \leq \mathbf{y}_{ub}$$
+
 
 - Then apply the new operator $g^*_k$ to obtain the optimal control action to the system.
 
