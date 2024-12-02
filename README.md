@@ -179,6 +179,9 @@ s.t.  $$\mathbf{u}_{lb} \leq U_f g^*_k \leq \mathbf{u}_{ub}$$
 
 $$\mathbf{y}_{lb} \leq Y_f g^*_k \leq \mathbf{y}_{ub}$$
 
+<img src="https://latex.codecogs.com/svg.latex?\min_{g^*_k}&space;\Vert&space;g^*_k&space;-&space;\hat{g}_k&space;\Vert_2^2&space;\text{s.t.}&space;\mathbf{u}_{lb}&space;\leq&space;U_f&space;g^*_k&space;\leq&space;\mathbf{u}_{ub},&space;\mathbf{y}_{lb}&space;\leq&space;Y_f&space;g^*_k&space;\leq&space;\mathbf{y}_{ub}" />
+
+
 
 - Then apply the new operator $g^*_k$ to obtain the optimal control action to the system.
 
