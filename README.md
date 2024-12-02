@@ -155,7 +155,7 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
-- Neural network: $\hat{g} = F_{\theta}(\mathbf{u}_{ini}, \mathbf{y}_{ini}, e_u, e_y | \theta)$ 
+- Neural network: $$\hat{g} = F_{\theta}(\mathbf{u}_{ini},\mathbf{y}_{ini}, e_u, e_y | \theta)$$ 
 
 - Objective function: $J = \mathbb{E}_{\mathcal{D}} \Vert \mathbf{y}^r - \hat{\mathbf{y}} \Vert_Q^2 + \Vert \mathbf{u}^r - \hat{\mathbf{u}} \Vert_R^2 + \omega (\mathbf{u}, \mathbf{y})$ 
 
@@ -169,11 +169,11 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 - When predicted trajectories $\hat{\mathbf{u}}_k = U_f \hat{g}_k, \ \hat{\mathbf{y}}_k = Y_f \hat{g}_k$ violate constraints, solve the following optimization problem:
 
-    $min_{g^*_k} \Vert g^*_k - \hat{g}_k \Vert_2^2$
+    $$min_{g^*_k} \Vert g^*_k - \hat{g}_k \Vert_2^2$$
 
-    s.t. $\quad \mathbf{u}_{lb} \leq U_f g^*_k\leq \mathbf{u}_{ub}$
+    s.t. $$\quad \mathbf{u}_{lb} \leq U_f g^*_k\leq \mathbf{u}_{ub}$$
 
-    $\mathbf{y}_{lb} \leq Y_f g^*_k \leq \mathbf{y}_{ub}$
+    $$\mathbf{y}_{lb} \leq Y_f g^*_k \leq \mathbf{y}_{ub}$$
 
 - Then apply the new operator $g^*_k$ to obtain the optimal control action to the system.
 
