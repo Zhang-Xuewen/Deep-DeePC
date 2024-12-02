@@ -63,6 +63,7 @@ For example:
 ```
 
 - Figure of generating set-points:
+- 
 ![gen_sp](./_data/README_fig/gen_sp.png)
 
 
@@ -158,7 +159,7 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or no online optimization using deep learning**](https://arxiv.org/abs/2408.16338). Please refer to the paper for more details.
 
-- Neural network: $\hat{g} = F_{\theta}(\bm{u}_{ini},\bm{y}_{ini}, e_u, e_y \mid \theta)$
+- Neural network: $\hat{g} = F_{\theta}(\bold{u}_{ini},\bold{y}_{ini}, e_u, e_y \mid \theta)$
 
 
 - Objective function: $J = \mathbb{E}_{\mathcal{D}} \Vert \mathbf{y}^r - \hat{\mathbf{y}} \Vert_Q^2 + \Vert \mathbf{u}^r - \hat{\mathbf{u}} \Vert_R^2 + \omega (\mathbf{u}, \mathbf{y})$ 
@@ -175,7 +176,9 @@ Figure from our paper [**Deep DeePC: Data-enabled predictive control with low or
 
 $$\min_{g^{\*}_k} \Vert g^{\*}_k - \hat{g}_k \Vert_2^2$$
 
-s.t.  $$\mathbf{u}_{lb} \leq U_f g^{\*}_k \leq \mathbf{u}_{ub}$$
+s.t.  
+
+$$\bm{u}_{lb} \leq U_f g^{\*}_k \leq \bm{u}_{ub}$$
 
 $$\mathbf{y}_{lb} \leq Y_f g^{\*}_k \leq \mathbf{y}_{ub}$$
 
