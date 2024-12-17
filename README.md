@@ -26,7 +26,7 @@ The objective of this work is to learn the DeePC operator using a neural network
     - [2. Offline training](#2-offline-training)
     - [3. Constrained Deep DeePC for online implementation](#3-constrainted-deep-deepc-for-online-implementation)
 - [IV. Case study on chemical process](#iv-case-study-on-chemical-process)
-- [Acknowledgement](#acknowledgment)
+- [Acknowledgment](#acknowledgment)
 - [Citation](#citation)
 - [License](#license)
 
